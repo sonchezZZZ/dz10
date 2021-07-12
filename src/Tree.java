@@ -30,16 +30,20 @@ public class Tree {
     }
 
     public void print() {
-        printRecursive(root);
+        printRecursiveRight(root);
     }
 
     private void printRecursive(Node node) {
-        System.out.println(node.value);
         if (node.left != null) {
-            printRecursive(node.left);
+            printRecursiveRight(node.left);
         }
+        System.out.println(node.value);
         if (node.right != null) {
-            printRecursive(node.right);
+            printRecursiveRight(node.right);
         }
+    }
+
+    private void printRecursiveRight(Node node) {
+
     }
 }
